@@ -6,19 +6,19 @@
   -moz-osx-font-smoothing: grayscale;
   font-optical-sizing: auto;
   font-weight: 400;
-  background: #f5f1ea;
-  color: #0f172a;
+  background: #05070d;
+  color: #f8fafc;
   scroll-behavior: smooth;
-  --bg-page: #f6f1ea;
-  --bg-soft: #fffaf5;
-  --surface: rgba(255, 255, 255, 0.76);
-  --surface-strong: #ffffff;
-  --line: rgba(148, 163, 184, 0.25);
+  --bg-page: #05070d;
+  --bg-soft: #121826;
+  --surface: rgba(15, 23, 42, 0.78);
+  --surface-strong: #111827;
+  --line: rgba(148, 163, 184, 0.18);
   --primary: #f97316;
   --primary-deep: #ea580c;
-  --dark: #111827;
-  --muted: #64748b;
-  --shadow-xl: 0 24px 80px rgba(15, 23, 42, 0.12);
+  --dark: #020817;
+  --muted: #94a3b8;
+  --shadow-xl: 0 30px 95px rgba(2, 6, 23, 0.72);
 }
 
 html {
@@ -30,10 +30,10 @@ body {
   min-height: 100vh;
   margin: 0;
   background:
-    radial-gradient(circle at top right, rgba(251, 146, 60, 0.18), transparent 24%),
-    radial-gradient(circle at bottom left, rgba(14, 116, 144, 0.12), transparent 26%),
-    linear-gradient(180deg, #f7f4ef 0%, #f3efe9 100%);
-  color: var(--dark);
+    radial-gradient(circle at top right, rgba(249, 115, 22, 0.22), transparent 24%),
+    radial-gradient(circle at bottom left, rgba(251, 146, 60, 0.14), transparent 30%),
+    linear-gradient(180deg, #05070d 0%, #090d14 100%);
+  color: #f8fafc;
 }
 
 #root {
@@ -56,11 +56,24 @@ button:disabled {
 }
 
 .premium-shell {
-  background: rgba(255, 255, 255, 0.7);
-  border: 1px solid rgba(148, 163, 184, 0.22);
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.88), rgba(30, 41, 59, 0.82));
+  border: 1px solid rgba(251, 146, 60, 0.2);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.05);
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.28);
+  color: #f8fafc;
+}
+
+.premium-shell .text-slate-400 {
+  color: rgba(148, 163, 184, 0.95) !important;
+}
+
+.premium-shell .text-slate-300 {
+  color: rgba(203, 213, 225, 1) !important;
+}
+
+.premium-shell .text-slate-200 {
+  color: rgba(226, 232, 240, 1) !important;
 }
 
 .premium-shadow {

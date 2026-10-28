@@ -1,10 +1,13 @@
 import { useState } from 'react'
 import HomePage from './pages/HomePage.jsx'
 import CartPage from './pages/CartPage.jsx'
+import AppliancesPage from './pages/AppliancesPage.jsx'
+import ProductDetailPage from './pages/ProductDetailPage.jsx'
 
 function App() {
   const [cartItems, setCartItems] = useState([])
   const [currentPage, setCurrentPage] = useState('home')
+  const [selectedProduct, setSelectedProduct] = useState(null)
 
   const addToCart = (product) => {
     setCartItems((current) => {
@@ -27,8 +30,6 @@ function App() {
         },
       ]
     })
-
-    setCurrentPage('home')
   }
 
   const updateQuantity = (productId, change) => {
@@ -46,6 +47,18 @@ function App() {
     setCartItems((current) => current.filter((item) => item.id !== productId))
   }
 
+  const handleOpenProduct = (product) => {
+    setSelectedProduct(product)
+    setCurrentPage('details')
+  }
+
+  const handleYourPage = (page) => {
+    setCurrentPage(page)
+    if (page !== 'details') {
+      setSelectedProduct(null)
+    }
+  }
+
   if (currentPage === 'cart') {
     return (
       <CartPage
@@ -57,6 +70,33 @@ function App() {
     )
   }
 
+  if (currentPage === 'details' && selectedProduct) {
+    return (
+      <ProductDetailPage
+        product={selectedProduct}
+        cartItems={cartItems}
+        onAddToCart={addToCart}
+        onBack={() => setCurrentPage('appliances')}
+        onOpenCart={() => setCurrentPage('cart')}
+        onNavigate={handleYourPage}
+      />
+    )
+  }
+
+  if (currentPage === 'appliances') {
+    return (
+      <AppliancesPage
+        cartItems={cartItems}
+        onAddToCart={addToCart}
+        onRemoveFromCart={removeFromCart}
+        onUpdateQuantity={updateQuantity}
+        onOpenCart={() => setCurrentPage('cart')}
+        onOpenProduct={handleOpenProduct}
+        onNavigate={handleYourPage}
+      />
+    )
+  }
+
   return (
     <HomePage
       cartItems={cartItems}
@@ -64,6 +104,8 @@ function App() {
       onRemoveFromCart={removeFromCart}
       onUpdateQuantity={updateQuantity}
       onOpenCart={() => setCurrentPage('cart')}
+      onOpenProduct={handleOpenProduct}
+      onNavigate={handleYourPage}
     />
   )
 }

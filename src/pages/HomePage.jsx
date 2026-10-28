@@ -89,9 +89,9 @@ function HomePage({ cartItems, onAddToCart, onRemoveFromCart, onUpdateQuantity, 
 
   return (
     <div dir="rtl" className="min-h-screen bg-transparent text-slate-900">
-      <div className=" from-slate-950 via-slate-900 to-orange-950 text-slate-200 shadow-[0_20px_40px_rgba(15,23,42,0.15)]">
+      <div className="bg-[linear-gradient(90deg,#0c111a_0%,#111827_40%,#1a120a_100%)] text-slate-200 shadow-[0_20px_40px_rgba(15,23,42,0.35)]">
         <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-x-3 gap-y-1 px-4 py-2.5 text-center text-xs sm:justify-between sm:text-sm">
-          <p className="font-medium">توصيل مجاني للطلبات فوق ٢٠٠٠ جنيه</p>
+          <p className="font-medium text-orange-200">توصيل مجاني للطلبات فوق ٢٠٠٠ جنيه</p>
           <p className="text-slate-300">تسوق أذكى. اختيارات أفضل.</p>
         </div>
       </div>
@@ -106,57 +106,74 @@ function HomePage({ cartItems, onAddToCart, onRemoveFromCart, onUpdateQuantity, 
       <main>
         <section className="soft-grid mx-auto grid max-w-7xl gap-10 px-4 py-10 sm:py-16 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-16" aria-labelledby="hero-title">
           <div className="py-2">
-            <span className="inline-flex items-center gap-2 rounded-full border border-orange-200 bg-orange-50/90 px-3 py-1.5 text-sm font-bold text-orange-700 shadow-sm">
-              <span className="h-2 w-2 rounded-full bg-orange-500" />
+            <span className="inline-flex items-center gap-2 rounded-full border border-orange-300/50 bg-orange-500/10 px-3 py-1.5 text-sm font-bold text-orange-300 shadow-sm">
+              <span className="h-2 w-2 rounded-full bg-orange-400" />
               عالم التقنية بين إيديك
             </span>
-            <h1 id="hero-title" className="mt-6 max-w-2xl text-4xl font-black leading-[1.3] tracking-tight text-slate-950 sm:text-5xl lg:text-6xl">
+            <h1 id="hero-title" className="mt-6 max-w-2xl text-4xl font-black leading-[1.3] tracking-tight text-white sm:text-5xl lg:text-6xl">
               اختار جهازك الجديد،
-              <span className="block text-orange-500">وخلي الباقي علينا.</span>
+              <span className="block text-orange-400">وخلي الباقي علينا.</span>
             </h1>
-            <p className="mt-5 max-w-xl text-base leading-8 text-slate-600 sm:text-lg">
+            <p className="mt-5 max-w-xl text-base leading-8 text-slate-300 sm:text-lg">
               اكتشف أحدث الأجهزة والإكسسوارات من كتالوج متجدد، بتفاصيل واضحة وتجربة تسوق أسهل.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a className="rounded-xl  from-orange-500 to-orange-600 px-6 py-3.5 font-bold text-white shadow-[0_18px_35px_rgba(249,115,22,0.25)] transition hover:-translate-y-0.5 hover:shadow-[0_22px_40px_rgba(249,115,22,0.30)]" href="#products">
                 اكتشف المنتجات
               </a>
-              <a className="rounded-xl border border-slate-300 bg-white/80 px-6 py-3.5 font-bold text-slate-700 transition hover:border-slate-400 hover:bg-slate-50" href="#categories">
+              <a className="rounded-xl border border-slate-700 bg-slate-900/70 px-6 py-3.5 font-bold text-slate-100 transition hover:border-slate-500 hover:bg-slate-800" href="#categories">
                 تصفح الأقسام
               </a>
             </div>
-            <div className="mt-9 flex flex-wrap gap-x-7 gap-y-3 text-sm font-semibold text-slate-600">
-              <span className="flex items-center gap-2"><span className="text-orange-500">✓</span> كتالوج متجدد</span>
-              <span className="flex items-center gap-2"><span className="text-orange-500">✓</span> تفاصيل وأسعار واضحة</span>
-              <span className="flex items-center gap-2"><span className="text-orange-500">✓</span> تسوق بكل سهولة</span>
+            <div className="mt-9 flex flex-wrap gap-x-7 gap-y-3 text-sm font-semibold text-slate-300">
+              <span className="flex items-center gap-2"><span className="text-orange-400">✓</span> كتالوج متجدد</span>
+              <span className="flex items-center gap-2"><span className="text-orange-400">✓</span> تفاصيل وأسعار واضحة</span>
+              <span className="flex items-center gap-2"><span className="text-orange-400">✓</span> تسوق بكل سهولة</span>
             </div>
           </div>
 
-          <div className="premium-shell premium-shadow relative overflow-hidden rounded-[28px]  from-[#fffdfb] via-[#fffaf5] to-[#f8fafc] p-6 sm:p-9">
-            <div className="absolute -left-12 -top-20 h-64 w-64 rounded-full bg-orange-500/15 blur-3xl" />
-            <div className="absolute -bottom-24 right-0 h-72 w-72 rounded-full bg-amber-300/15 blur-3xl" />
+          <div className="premium-shell premium-shadow relative overflow-hidden rounded-[28px] p-6 sm:p-9">
+            <div className="absolute -left-12 -top-20 h-64 w-64 rounded-full bg-orange-500/20 blur-3xl" />
+            <div className="absolute -bottom-24 right-0 h-72 w-72 rounded-full bg-amber-300/10 blur-3xl" />
             <div className="relative flex h-full flex-col justify-between">
               <div className="flex items-center justify-between gap-4">
-                <span className="rounded-full border border-orange-200 bg-orange-100 px-3 py-1.5 text-xs font-semibold text-orange-700">اختيارات تستاهل</span>
-                <span className="text-xs text-slate-500">تجدد باستمرار</span>
+                <span className="rounded-full border border-orange-300/40 bg-orange-500/10 px-3 py-1.5 text-xs font-semibold text-orange-200">اختيارات تستاهل</span>
+                <span className="text-xs text-slate-400">تجدد باستمرار</span>
               </div>
               <div className="grid flex-1 items-center gap-3 sm:grid-cols-[1fr_1.2fr]">
-                <div className="relative z-10 py-6 text-slate-700">
-                  <p className="text-sm font-bold text-orange-600">تقنية أسهل، كل يوم</p>
-                  <h2 className="mt-3 text-3xl font-extrabold leading-snug text-black sm:text-4xl">كل اللي تحتاجه. في مكان واحد.</h2>
-                  <p className="mt-3 text-sm leading-7 text-slate-600">من أحدث الهواتف إلى إكسسواراتك اليومية.</p>
-                  <a className="mt-5 inline-flex items-center gap-2 font-bold text-orange-600 transition hover:text-orange-700" href="#products">
+                <div className="relative z-10 py-6 text-slate-200">
+                  <p className="text-sm font-bold text-orange-300">تقنية أسهل، كل يوم</p>
+                  <h2 className="mt-3 text-3xl font-extrabold leading-snug text-white sm:text-4xl">كل اللي تحتاجه. في مكان واحد.</h2>
+                  <p className="mt-3 text-sm leading-7 text-slate-300">من أحدث الهواتف إلى إكسسواراتك اليومية.</p>
+                  <a className="mt-5 inline-flex items-center gap-2 font-bold text-orange-300 transition hover:text-orange-100" href="#products">
                     تسوق الآن <span aria-hidden="true">←</span>
                   </a>
                 </div>
                 {featuredProduct ? (
                   <div className="relative mx-auto grid h-52 w-full max-w-xs place-items-center rounded-3xl bg-white/10 p-5 sm:h-64">
-                    <div className="absolute inset-4 rounded-2xl border border-white/10  from-white/15 to-transparent" />
+                    <div className="absolute inset-4 rounded-2xl border border-white/10 from-white/15 to-transparent" />
                     <img
                       className="relative h-full w-full object-contain drop-shadow-2xl"
                       src={featuredProduct.thumbnail}
                       alt={featuredProduct.title}
-                      onError={(event) => { event.currentTarget.style.display = 'none' }}
+                      onError={(event) => {
+                        event.currentTarget.src = `data:image/svg+xml;utf8,${encodeURIComponent(`
+                          <svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800">
+                            <defs>
+                              <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+                                <stop offset="0%" stop-color="#fff7ed"/>
+                                <stop offset="100%" stop-color="#f1f5f9"/>
+                              </linearGradient>
+                            </defs>
+                            <rect width="800" height="800" fill="url(#g)"/>
+                            <rect x="160" y="170" width="480" height="460" rx="60" fill="#ffffff" opacity="0.8"/>
+                            <rect x="230" y="250" width="340" height="120" rx="22" fill="#fed7aa"/>
+                            <rect x="260" y="410" width="280" height="30" rx="15" fill="#fdba74"/>
+                            <rect x="260" y="470" width="230" height="30" rx="15" fill="#fdba74" opacity="0.8"/>
+                            <text x="400" y="620" font-size="52" text-anchor="middle" fill="#c2410c" font-family="Arial, sans-serif" font-weight="700">Product</text>
+                          </svg>
+                        `)}`
+                      }}
                     />
                     <span className="absolute bottom-3 left-3 rounded-full bg-orange-500 px-3 py-1 text-xs font-bold text-white">
                       {new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(featuredProduct.price)}

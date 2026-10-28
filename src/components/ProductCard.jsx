@@ -21,14 +21,14 @@ const FALLBACK_IMAGE = `data:image/svg+xml;utf8,${encodeURIComponent(`
 function ProductCard({ product, categoryLabel, onAddToCart }) {
   return (
     <article key={product.id} className="group flex h-full flex-col overflow-hidden rounded-[26px] border border-slate-200/80 bg-white/80 backdrop-blur-sm transition duration-300 hover:-translate-y-1 hover:border-orange-200 hover:shadow-[0_24px_50px_rgba(15,23,42,0.08)]">
-      <div className="relative grid h-56 place-items-center overflow-hidden  from-orange-50 via-white to-slate-100 p-5">
+      <div className="relative grid h-56 place-items-center overflow-hidden bg-gradient-to-br from-orange-50 via-white to-slate-100 p-2">
         {product.discountPercentage > 0 && (
           <span className="absolute right-3 top-3 z-10 rounded-full bg-orange-500 px-3 py-1 text-xs font-bold text-white">
             خصم {Math.round(product.discountPercentage)}%
           </span>
         )}
         <img
-          className="h-full w-full object-contain transition duration-300 group-hover:scale-105"
+          className="h-full w-full max-h-52 object-contain transition duration-300 ease-out group-hover:scale-110"
           src={product.thumbnail || FALLBACK_IMAGE}
           alt={product.title}
           loading="lazy"
