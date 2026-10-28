@@ -38,8 +38,8 @@ function ProductDetailPage({ product, cartItems, onAddToCart, onBack, onOpenCart
         </button>
 
         <div className="grid gap-8 rounded-[30px] border border-slate-200 bg-white p-4 shadow-[0_25px_60px_rgba(15,23,42,0.08)] sm:p-8 lg:grid-cols-[1fr_0.9fr]">
-          <div className="overflow-hidden rounded-[28px] border border-slate-200 bg-gradient-to-br from-orange-50 via-white to-slate-100 p-6">
-            <img src={product.thumbnail} alt={product.title} className="h-full max-h-[520px] w-full object-contain" />
+          <div className="overflow-hidden rounded-[28px] border border-slate-200  from-orange-50 via-white to-slate-100 p-6">
+            <img src={product.thumbnail} alt={product.title} className="h-full  w-full object-contain" />
           </div>
 
           <div className="flex flex-col justify-center">
@@ -60,7 +60,7 @@ function ProductDetailPage({ product, cartItems, onAddToCart, onBack, onOpenCart
               )}
             </div>
 
-            <div className="mt-6 space-y-3 rounded-[24px] bg-slate-50 p-4 text-sm text-slate-700">
+            <div className="mt-6 space-y-3  bg-slate-50 p-4 text-sm text-slate-700">
               <div className="flex items-center justify-between">
                 <span>الحالة</span>
                 <span className="font-bold text-emerald-600">{product.stock > 0 ? 'متوفر الآن' : 'غير متوفر'}</span>
