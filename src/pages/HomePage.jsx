@@ -150,10 +150,10 @@ function HomePage({ cartItems, onAddToCart, onRemoveFromCart, onUpdateQuantity, 
                   </a>
                 </div>
                 {featuredProduct ? (
-                  <div className="relative mx-auto grid h-52 w-full max-w-xs place-items-center rounded-3xl bg-white/10 p-5 sm:h-64">
+                  <div className="relative mx-auto flex h-52 w-full max-w-[260px] items-center justify-center overflow-hidden rounded-3xl bg-white/10 p-4 sm:h-64 sm:max-w-[290px]">
                     <div className="absolute inset-4 rounded-2xl border border-white/10 from-white/15 to-transparent" />
                     <img
-                      className="relative h-full w-full object-contain drop-shadow-2xl"
+                      className="relative h-full w-auto max-h-[180px] object-contain drop-shadow-2xl sm:max-h-[240px]"
                       src={featuredProduct.thumbnail}
                       alt={featuredProduct.title}
                       onError={(event) => {
